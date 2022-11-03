@@ -1,0 +1,73 @@
+\documentclass[oneside]{book}
+
+\input{pacotes/pacotes.tex}
+
+% ->B: AVISO: A gambiarra a seguir pode te matar.
+\title{
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=10cm]{imagens/logo.png} 		
+	\end{figure}
+	\textbf{Trabalho de Introdução à Computação}}
+\author{
+	Alice Pereira de Aguilar Penido \thanks{alicepenido1@gmail.com} \\
+	Breno Marques Azevedo \thanks{eborn.azevedo@gmail.com} \\
+	Cleomar Felipe Rabelo Antoszczyszyn \thanks{cleomarfelipe@gmail.com} \\
+	Gustavo Ramalho \thanks{gustavoramalho384@gmail.com} \\
+	João Victor Mendes  \thanks{j.victor8@hotmail.com}
+}
+\date{\today} % -> Iniciado em 07/03/2020
+
+\pagenumbering{Roman}
+\begin{document}
+	% ->B: Selecionei a fonte Computer Modern Roman, pois ela está mais de acordo com o modelo de trabalhos científicos(eu acho).
+	{\fontfamily{cmr}\selectfont 
+		\maketitle
+		\newgeometry{left=1cm, right=1cm, bottom=1cm, top=1cm}
+		\thispagestyle{empty}
+		\setcounter{page}{1}
+		\tableofcontents
+		\listoffigures
+		
+		\chapter{Alice Pereira de Aguilar Penido}
+		\pagenumbering{arabic}
+		\section*{Segue na próxima página o currículo de Alice Pereira de Aguilar Penido}
+		\restoregeometry
+		\input{alice/cvalice.tex}
+		
+		\newgeometry{left=1cm, right=1cm}
+		\chapter{Breno Marques Azevedo}
+		\section*{Segue na próxima página o currículo de Breno Marques Azevedo\cite{quantbytes}}
+		\restoregeometry
+		\newpage
+		\input{breno/cvbreno2.tex}
+	}
+	
+	\newgeometry{left=1cm, right=1cm}
+	\chapter{Cleomar Felipe Rabelo Antoszczyszyn}
+	\section*{O currículo de Cleomar Felipe Rabelo Antoszczyszyn encontra-se na próxima página}
+	\restoregeometry
+	\newpage
+	\input{cleomar/cvcleomar.tex}
+	% ->B: De novo a fonte Computer Modern Roman.
+	{\fontfamily{cmr}\selectfont
+		
+		\chapter{Gustavo Ramalho}
+		\section*{Segue na próxima página o currículo de Gustavo Ramalho}
+		\newpage
+		\input{gustavo/cvgustavo.tex}
+		
+		\chapter{João Victor Mendes}
+		\section*{Segue na próxima página o currículo de João Victor Mendes}
+		\newpage
+		\input{victormendes/victormendes.tex}
+		
+		\chapter{Equipe}
+		\section*{Segue na próxima página o currículo da equipe profissional de League of Legends\cite{prabhu}}
+		\newpage
+		\input{equipe/cvequipe.tex}
+		
+		\bibliographystyle{acm}
+		\bibliography{referencias/referencias.bib}
+	}
+\end{document}
